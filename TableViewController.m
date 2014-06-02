@@ -11,7 +11,9 @@
 #import "DetailViewController.h"
 
 @interface TableViewController ()
-
+{
+    NSMutableArray*dataAll;
+}
 @end
 
 @implementation TableViewController
@@ -36,6 +38,11 @@
     [[self navigationItem] setBackBarButtonItem:newBackButton];
     
     _titulo = @[@"ejemplo1",@"ejemplo2",@"ejemplo3",@"ejemplo4"];
+    NSArray* sendData1 = @[@"aaa",@"bbb",@"ejemplo3",@"ejemplo4"];
+     NSArray* sendData2 = @[@"ccc",@"ddd",@"ejemplo3",@"ejemplo4"];
+     NSArray* sendData3 = @[@"eee",@"fff",@"ejemplo3",@"ejemplo4"];
+     NSArray* sendData4 = @[@"hhh",@"iii",@"ejemplo3",@"ejemplo4"];
+    dataAll=[[NSMutableArray alloc] initWithObjects:sendData1,sendData2,sendData3,sendData4, nil];
     _imagenes = @[@"leslie2.jpg",@"vanessa1.jpg",@"vanessa3.jpg",@"vanessa4.jpg"];
 
     
@@ -88,7 +95,7 @@
         
         int row = [myIndexPath row];
         detailviewcontroller.detailModal = @[_titulo[row],_imagenes[row]];
-        
+        [detailviewcontroller setMyArray:(NSArray*)[dataAll objectAtIndex:row]];
     }
 }
 

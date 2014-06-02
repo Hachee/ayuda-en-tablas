@@ -29,4 +29,5 @@
 
 
 @property (strong, nonatomic) IBOutlet UITableView *vistaTabla;
+@property (strong, nonatomic) NSArray*myArray;
 @end

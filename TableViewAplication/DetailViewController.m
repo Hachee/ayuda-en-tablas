@@ -15,7 +15,7 @@
 @end
 
 @implementation DetailViewController
-
+@synthesize myArray;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    myArray = @[@"omar",@"hector",@"clara",@"jose"];
+   
     imagenPrueba2 = @[@"leslie2.jpg",@"vanessa1.jpg",@"vanessa3.jpg",@"vanessa4.jpg"];
     // Do any additional setup after loading the view.
     
